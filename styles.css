@@ -1,0 +1,19 @@
+.header {
+  margin-bottom: 75px;
+}
+
+.input {
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .input {
+    width: 250px;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Loan Calculator</title>
+    <meta name="description" content="A simple loan calculator will calculate your repayments for loans such as a mortgage, just add your loan amount, interest you will be charged and the length of the loan aggrement.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="section">
+        <div class="container">
+          <div class="content">
+            <header class="header">
+              <h1 class="title is-1">Simple Loan Calculator</h1>
+              <h2 class="is-size-4">A simple loan calculator that will calculate your repayments for loans such as a mortgage.</h2>
+            </header>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <form id="loan-form">
+                    <div class="level">
+                      <div class="level-left is-marginless">
+                        <div class="level-item">
+                          <p class="is-size-5">Loan Amount</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item">
+                          <div class="field">
+                            <div class="control has-icons-left ">
+                              <input class="input" id="amount" type="number" required/>
+                              <span class="icon is-small is-left">
+                                <i class="fa fa-pound-sign"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="level">
+                      <div class="level-left is-marginless">
+                        <div class="level-item">
+                          <p class="is-size-5">Interest Rate</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item">
+                          <div class="field">
+                            <div class="control has-icons-left">
+                              <input class="input" id="interest" type="number" required/>
+                              <span class="icon is-small is-left">
+                                <i class="fa fa-percentage"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="level">
+                      <div class="level-left is-marginless">
+                        <div class="level-item">
+                          <p class="is-size-5">Number Of Years</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item">
+                          <div class="field">
+                            <div class="control has-icons-left">
+                              <input class="input" id="years" type="number" required/>
+                              <span class="icon is-small is-left">
+                                <i class="fa fa-calendar"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="control">
+                      <button type="submit" class="button is-large is-fullwidth is-primary is-outlined">Calculate</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h3 class="title">Calculated Results</h3>
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="notification is-primary has-text">
+              <p id="monthlyPayment" class="title is-3"></p>
+              <p class="subtitle is-4">Monthly Payments</p>
+            </div>
+          </div>
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="notification is-info has-text">
+              <p id="totalInterest" class="title is-3"></p>
+              <p class="subtitle is-4">Interest Charged</p>
+            </div>
+          </div>
+          <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+            <div class="notification is-link has-text">
+              <p id="totalPayment" class="title is-3"></p>
+              <p class="subtitle is-4">Total Payable</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
